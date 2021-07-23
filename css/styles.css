@@ -39,7 +39,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 30px;
+  padding: 10px;
 }
 
 .players button {
@@ -52,6 +52,14 @@ img {
   padding-left: 16px;
   padding-right: 16px;
   border-radius: 6px;
+}
+
+.player1 :hover {
+  cursor: pointer;
+}
+
+.player2 :hover {
+  cursor: pointer;
 }
 
 .message {
@@ -98,6 +106,4 @@ img {
 
 .img-grid {
   flex-basis: 20%;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
