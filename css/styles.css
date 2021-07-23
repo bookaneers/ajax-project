@@ -1,0 +1,109 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  background-color: rgb(255, 255, 142);
+  max-width: 992px;
+  font-size: 45px;
+  color: purple;
+}
+
+main {
+  background-color: lightyellow;
+  max-width: 992px;
+}
+
+img {
+  width: 50%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.title-game {
+  display: 100%;
+}
+
+.container {
+  max-width: 992px;
+}
+
+.players {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.players button {
+  font-size: 24px;
+  background-color: rgb(255, 255, 142);
+  color: purple;
+  margin: 12px 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 6px;
+}
+
+.player1 :hover {
+  cursor: pointer;
+}
+
+.player2 :hover {
+  cursor: pointer;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 30px;
+}
+
+.message button {
+  font-size: 24px;
+  background-color: rgb(255, 255, 142);
+  color: purple;
+  margin: 12px 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 64px;
+  padding-right: 64px;
+  border-radius: 6px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.row button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-size: 12px;
+  background-color: rgb(255, 255, 142);
+  color: purple;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.img-grid {
+  flex-basis: 20%;
+}

@@ -1,0 +1,15 @@
+@media only screen and (min-width: 576px) {
+  /* .col-sm-half {
+    width: 50%;
+  } */
+}
+
+@media only screen and (min-width: 768px) {
+  /* .col-lg-third {
+    width: calc(100% / 3);
+  }
+
+  .col-lg-fourth {
+    width: 25%;
+  } */
+}
