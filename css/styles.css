@@ -35,11 +35,30 @@ img {
   max-width: 992px;
 }
 
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.message button {
+  font-size: 24px;
+  background-color: rgb(255, 255, 142);
+  color: purple;
+  margin: 12px 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 64px;
+  padding-right: 64px;
+  border-radius: 6px;
+}
+
 .players {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 10px;
 }
 
 .players button {
@@ -60,25 +79,6 @@ img {
 
 .player2 :hover {
   cursor: pointer;
-}
-
-.message {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding-bottom: 30px;
-}
-
-.message button {
-  font-size: 24px;
-  background-color: rgb(255, 255, 142);
-  color: purple;
-  margin: 12px 0;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 64px;
-  padding-right: 64px;
-  border-radius: 6px;
 }
 
 .row {
@@ -104,6 +104,22 @@ img {
   border-radius: 6px;
 }
 
-.img-grid {
+.img-grid-p1 {
   flex-basis: 20%;
+}
+
+.img-grid-w {
+  flex-basis: 20%;
+}
+
+.img-grid-p2 {
+  flex-basis: 20%;
+}
+
+.fighting {
+  background-color: red;
+}
+
+.picked {
+  color: red;
 }
