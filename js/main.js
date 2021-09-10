@@ -28,27 +28,27 @@ $player2.addEventListener('click', function (event) {
 
 function battles() {
 
-  document.querySelector('#p1c1').src = playerOneList[0].sprites.back_default;
-  document.querySelector('#p1c2').src = playerOneList[1].sprites.back_default;
-  document.querySelector('#p1c3').src = playerOneList[2].sprites.back_default;
-  document.querySelector('#p1c4').src = playerOneList[3].sprites.back_default;
-  document.querySelector('#p1c5').src = playerOneList[4].sprites.back_default;
-  document.querySelector('#p1c6').src = playerOneList[5].sprites.back_default;
-  document.querySelector('#p1c7').src = playerOneList[6].sprites.back_default;
-  document.querySelector('#p1c8').src = playerOneList[7].sprites.back_default;
-  document.querySelector('#p1c9').src = playerOneList[8].sprites.back_default;
-  document.querySelector('#p1c10').src = playerOneList[9].sprites.back_default;
+  document.querySelector('#p1c1').src = playerOneList[0].sprites.front_default;
+  document.querySelector('#p1c2').src = playerOneList[1].sprites.front_default;
+  document.querySelector('#p1c3').src = playerOneList[2].sprites.front_default;
+  document.querySelector('#p1c4').src = playerOneList[3].sprites.front_default;
+  document.querySelector('#p1c5').src = playerOneList[4].sprites.front_default;
+  document.querySelector('#p1c6').src = playerOneList[5].sprites.front_default;
+  document.querySelector('#p1c7').src = playerOneList[6].sprites.front_default;
+  document.querySelector('#p1c8').src = playerOneList[7].sprites.front_default;
+  document.querySelector('#p1c9').src = playerOneList[8].sprites.front_default;
+  document.querySelector('#p1c10').src = playerOneList[9].sprites.front_default;
 
-  document.querySelector('#p2c1').src = playerTwoList[0].sprites.back_default;
-  document.querySelector('#p2c2').src = playerTwoList[1].sprites.back_default;
-  document.querySelector('#p2c3').src = playerTwoList[2].sprites.back_default;
-  document.querySelector('#p2c4').src = playerTwoList[3].sprites.back_default;
-  document.querySelector('#p2c5').src = playerTwoList[4].sprites.back_default;
-  document.querySelector('#p2c6').src = playerTwoList[5].sprites.back_default;
-  document.querySelector('#p2c7').src = playerTwoList[6].sprites.back_default;
-  document.querySelector('#p2c8').src = playerTwoList[7].sprites.back_default;
-  document.querySelector('#p2c9').src = playerTwoList[8].sprites.back_default;
-  document.querySelector('#p2c10').src = playerTwoList[9].sprites.back_default;
+  document.querySelector('#p2c1').src = playerTwoList[0].sprites.front_default;
+  document.querySelector('#p2c2').src = playerTwoList[1].sprites.front_default;
+  document.querySelector('#p2c3').src = playerTwoList[2].sprites.front_default;
+  document.querySelector('#p2c4').src = playerTwoList[3].sprites.front_default;
+  document.querySelector('#p2c5').src = playerTwoList[4].sprites.front_default;
+  document.querySelector('#p2c6').src = playerTwoList[5].sprites.front_default;
+  document.querySelector('#p2c7').src = playerTwoList[6].sprites.front_default;
+  document.querySelector('#p2c8').src = playerTwoList[7].sprites.front_default;
+  document.querySelector('#p2c9').src = playerTwoList[8].sprites.front_default;
+  document.querySelector('#p2c10').src = playerTwoList[9].sprites.front_default;
 
 }
 
