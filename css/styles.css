@@ -56,12 +56,20 @@ img {
   border-radius: 6px;
 }
 
-.player1 :hover {
+#playerOne {
   cursor: pointer;
 }
 
-.player2 :hover {
+#playerOne.noMoreHover:hover{
+  cursor: default;
+}
+
+#playerTwo {
   cursor: pointer;
+}
+
+#playerTwo.noMoreHover:hover{
+  cursor: default;
 }
 
 .message {
@@ -108,4 +116,12 @@ img {
 
 .img-grid {
   flex-basis: 20%;
+}
+
+.img-grid span {
+  color: purple;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
