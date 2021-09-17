@@ -2,30 +2,30 @@
 
 // function to enter players' name
 function names() {
-  // setTimeout(() => {
+  console.log('names')
+  var $message = document.querySelector('#message');
+  $message.textContent = 'Welcome Players! Please enter your names...';
 
-    var $message = document.querySelector('#message');
-    $message.textContent = 'Welcome Players! Please enter your names...';
+  function enterName(event) {
+    const player = event.target;
+    player.textContent = prompt('Enter player\'s name', 'Player');
+    player.removeEventListener('click', enterName);
+    player.classList.add('noMoreHover');
+  };
 
-    function enterName(event) {
-      const player = event.target;
-      player.textContent = prompt('Enter player\'s name', 'Player');
-      player.removeEventListener('click', enterName);
-      player.classList.add('noMoreHover');
-    };
+  // add name of the first player
+  var $playerOne = document.querySelector('#playerOne');
+  $playerOne.addEventListener('click', enterName);
 
-    // add name of the first player
-    var $playerOne = document.querySelector('#playerOne');
-    $playerOne.addEventListener('click', enterName);
+  // add name of the second player
+  var $playerTwo = document.querySelector('#playerTwo');
+  $playerTwo.addEventListener('click', enterName);
 
-    // add name of the second player
-    var $playerTwo = document.querySelector('#playerTwo');
-    $playerTwo.addEventListener('click', enterName);
-  // }, 0);
 }
 
 // function to set up screen grid with pokemon creatures
 function preparingForBattles() {
+  console.log('preparingForBattles')
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       for (var i = 1; i <= 10; i++) {
@@ -43,12 +43,18 @@ function preparingForBattles() {
   });
 }
 
+
 async function gameOn() {
   await preparingForBattles()
     .then(names)
     .catch(err => console.log(err));
-
-  fights();
 }
+
+
+// async function battle() {
+//   await gameOn()
+//     .then(fights)
+//     .catch(err => console.log(err));
+// }
 
 gameOn();

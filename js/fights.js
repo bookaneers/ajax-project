@@ -1,5 +1,7 @@
 function fights() {
-  console.log('hello hello');
+  console.log('fights');
+
+  fighting();
 
 }
 
@@ -10,27 +12,40 @@ function fights() {
 
 function fighting() {
 
-  // setTimeout(function battles() {
+  function handlePlayerClick(event) {
+    var temp = document.querySelector(`#${event.target.id}C`).textContent;
+    console.log(event.target.className);
+    document.querySelectorAll(`.${event.target.className}`).forEach(item => {
+      item.removeEventListener('click', handlePlayerClick);
+    });
+  }
+
+  function handlePlayerWeapon(event) {
+    var temp = document.querySelector(event.target.textContent);
+    console.log(event.target.textContent);
+    document.querySelectorAll(`.${event.target.className}`).forEach(item => {
+      item.removeEventListener('click', handlePlayerWeapon);
+    });
+  }
+
   const $playerOneFighter = document.querySelectorAll('.playerOneFighter').forEach(item => {
-    item.addEventListener('click', event => {
-      var temp = document.querySelector(`#${event.target.id}C`).textContent;
-      console.log(temp);
-    });
+    item.addEventListener('click', handlePlayerClick);
   });
 
-  document.querySelectorAll('.weapons').forEach(item => {
-    item.addEventListener('click', event => {
-      var temp = event.target.textContent;
-      console.log(temp);
-    });
+  const $weapons = document.querySelectorAll('.weapons').forEach(item => {
+    item.addEventListener('click', handlePlayerWeapon);
   });
 
-  document.querySelectorAll('.playerTwoFighter').forEach(item => {
-    item.addEventListener('click', event => {
-      var temp = document.querySelector(`#${event.target.id}C`).textContent;
-      console.log(temp);
-    });
+  const $playerTwoFighter = document.querySelectorAll('.playerTwoFighter').forEach(item => {
+    item.addEventListener('click', handlePlayerClick);
   });
-  // }, 200);
+
+
+
+      // console.log(`.${item.id}C`);
+    // console.log(document.querySelector(`.${item.id}C`));
+    // .classList.add('hoverOn');
 
 };
+
+// fights();
