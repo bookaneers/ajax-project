@@ -139,15 +139,12 @@ getPokemonNames();
 
 can you tell me what part is asynchronous ?
 
-  [LFZ] Tim Horist  6: 34 PM
-Usually you can spot things that might be asynchronous as things that either a) take a function as an argument, or b) return a promise that you have to call ‘.then’ or ‘.catch’ on.
 
-Fernando Figueiredo  6: 35 PM
-driving over pavers
-6: 35
-wrong message
+Usually you can spot things that might be asynchronous as things that either
+a) take a function as an argument, or
+b) return a promise that you have to call ‘.then’ or ‘.catch’ on.
 
-[LFZ] Tim Horist  6: 36 PM
+
 In your.put example above, ‘app.put(…)’, ‘db.query(…)’, and ‘res.json(…)’ are all asynchronous
 
 Fernando Figueiredo  6: 39 PM
