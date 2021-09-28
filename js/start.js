@@ -1,8 +1,10 @@
 // function to create battle grid and input players' name
 
 // function to enter players' name
-function names() {
-  console.log('names')
+function startGame() {
+  console.log('startGame');
+
+  var enterTwoNames = 0;
   var $message = document.querySelector('#message');
   $message.textContent = 'Welcome Players! Please enter your names...';
 
@@ -11,6 +13,11 @@ function names() {
     player.textContent = prompt('Enter player\'s name', 'Player');
     player.removeEventListener('click', enterName);
     player.classList.add('noMoreHover');
+    enterTwoNames ++;
+
+    if (enterTwoNames === 2) {
+      fights();
+    }
   };
 
   // add name of the first player
@@ -24,8 +31,8 @@ function names() {
 }
 
 // function to set up screen grid with pokemon creatures
-function preparingForBattles() {
-  console.log('preparingForBattles')
+function buildingTheGrid() {
+  console.log('buildingTheGrid');
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       for (var i = 1; i <= 10; i++) {
@@ -34,27 +41,16 @@ function preparingForBattles() {
         document.querySelector(`#p2c${i}`).src = playersPicksObj.player2[i + 10].sprites.front_default;
         document.querySelector(`#p2c${i}C`).textContent = playersPicksObj.player2[i + 10].name;
       }
-
       const error = false;
-      if (!error) resolve();
-      else reject('Error: Not able to display battle grid.');
-
-    }, 1000);
+      if (!error) {
+        resolve();
+      } else {
+        reject('Error: Something went wrong');
+      }
+    }, 2000);
   });
 }
 
-
-async function gameOn() {
-  await preparingForBattles()
-    .then(names)
-    .catch(err => console.log(err));
-}
-
-
-// async function battle() {
-//   await gameOn()
-//     .then(fights)
-//     .catch(err => console.log(err));
-// }
-
-gameOn();
+buildingTheGrid()
+  .then(startGame)
+  .catch(err => console.log(err));
