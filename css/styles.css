@@ -69,8 +69,12 @@ img {
   cursor: pointer;
 }
 
-#playerTwo.noMoreHover:hover{
+#playerTwo.noMoreHover:hover {
   cursor: default;
+}
+
+.hoverOn:hover {
+  cursor: pointer;
 }
 
 .message {
